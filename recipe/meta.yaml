@@ -1,0 +1,21 @@
+package:
+  name: apr-util
+  version: 1.5.4
+
+source:
+  # apr-util and apr-iconv are bundled with apr on windows
+  url: https://archive.apache.org/dist/apr/apr-util-1.5.4.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - apr
+    - {{ compiler('cxx') }}
+  host:
+    - apr
+
+about:
+  home: http://apr.apache.org/
+  license: Apache License 2.0
