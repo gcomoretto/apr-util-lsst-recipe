@@ -11,8 +11,9 @@ build:
 
 requirements:
   build:
-    - apr
-    - {{ compiler('cxx') }}
+    - apr 1.5.2
+    - clang                         [osx]
+    - gcc                           [linux]
   host:
     - apr
 
